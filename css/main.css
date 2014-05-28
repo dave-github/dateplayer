@@ -25,10 +25,25 @@ background:#666;
 color:#ddd;
 padding:4px;
 border:#222;
-width:50px;
+width:90px;
 font-weight:bold;
 border:1px solid #222;
 border-radius:4px;
+}
+
+#playlist ul li {
+padding:3px 0px;
+width:350px
+}
+
+#playlist ul li:hover {
+
+background:#777;
+
+}
+
+.playing {
+background:#999;
 }
 
 label {

@@ -1,4 +1,4 @@
-$(function() { 	
+$('document').ready(function () {
 	
 	$( "#select_playlist" ).click(function() {
 		var playlist_date = $('#date').val();
@@ -21,6 +21,8 @@ $(function() {
 				"src":'http://api.ilikemusic.com/stream/'+username+'/'+data[i].obfus+'/stream'+i+'.mp3',
 				"autoplay": "autoplay"
 				});
+				$("#playlist li").removeClass("playing");
+				$(this).attr({"class":"playing"});
 			});
 		});	
 	});	
