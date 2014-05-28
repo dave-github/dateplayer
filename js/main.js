@@ -15,7 +15,7 @@ $('document').ready(function () {
 			 html += '</ul>';
 			$('#playlist').html(html);
 				
-			$('#playlist').on('click','li',function() { 
+			$('#playlist li').click(function() { 
 			var i = $(this).index() ;
 			$('#player').attr({
 				"src":'http://api.ilikemusic.com/stream/'+username+'/'+data[i].obfus+'/stream'+i+'.mp3',
