@@ -9,13 +9,14 @@ $('document').ready(function () {
 			var items = [];
 			var html = '<ul>';
 			$.each( data, function( key, val ) {
-				html +='<li>' + val.song_title + ' - ' + val.artist_name + '</li>'+"\n";
+				html +='<li><a href="#">' + val.song_title + ' - ' + val.artist_name + '</a></li>'+"\n";
 				$('#player').append('<source src="http://api.ilikemusic.com/stream/'+username+'/'+val.obfus+'/stream'+key+'.mp3" type="audio/mpeg">'+"\n");
 			});
 			 html += '</ul>';
 			$('#playlist').html(html);
 				
-			$('#playlist li').click(function() { 
+			$('#playlist li a').click(function(e) { 
+			e.preventDefault();
 			var i = $(this).index() ;
 			$('#player').attr({
 				"src":'http://api.ilikemusic.com/stream/'+username+'/'+data[i].obfus+'/stream'+i+'.mp3',
